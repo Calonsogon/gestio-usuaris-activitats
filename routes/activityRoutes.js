@@ -5,7 +5,8 @@ const activityController = require('../controllers/activityController');
 router.post('/', activityController.createActivity); 
 router.get('/', activityController.getAllActivities); 
 router.get('/:id', activityController.getActivityById); 
-router.put('/:id', activityController.updateActivity); 
-router.delete('/:id', activityController.deleteActivity); 
+router.post('/import', activityController.importActivities); 
+router.get('/export', activityController.exportActivities); 
+router.post('/:id/join', activityController.joinActivity); 
 
 module.exports = router;

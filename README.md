@@ -46,19 +46,19 @@ node server.js
 
 ### Gestió d'Usuaris
 
-- **POST /appActivitats/user**: Registra un nou usuari.
+- **POST /appActivitats/users**: Registra un nou usuari.
 - **PUT /appActivitats/users/:id**: Actualitza les dades d'un usuari.
 - **GET /appActivitats/users/:id**: Consulta la informació d'un usuari.
 - **DELETE /appActivitats/users/:id**: Elimina un usuari.
-
 
 ### Gestió d'Activitats
 
 - **POST /appActivitats/activities**: Crea una nova activitat.
 - **GET /appActivitats/activities**: Obtén totes les activitats.
 - **GET /appActivitats/activities/:id**: Obtén una activitat per ID.
-- **PUT /appActivitats/activities/:id**: Actualitza una activitat.
-- **DELETE /appActivitats/activities/:id**: Elimina una activitat.
+- **POST /appActivitats/activities/import**: Importa activitats des d'un arxiu JSON.
+- **GET /appActivitats/activities/export**: Exporta totes les activitats en format JSON.
+- **POST /appActivitats/activities/join/:id**: Apunta a un usuari a una activitat.
 
 ## 🤝 Contribució
 

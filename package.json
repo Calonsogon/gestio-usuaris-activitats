@@ -1,17 +1,14 @@
 {
-  "name": "appactivitats",
+  "name": "gestio-usuaris-activitats",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "API per gestionar usuaris i activitats.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "express": "^4.21.0",
-    "mongoose": "^8.7.0"
+    "express": "^4.17.1",
+    "gestio-usuaris-activitats": "file:",
+    "mongoose": "^6.0.0"
   }
 }

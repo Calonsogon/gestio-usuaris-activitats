@@ -1,10 +1,8 @@
 const User = require('../models/User');
 
-exports.registerUser = async (req, res) => {
-    const { nom, cognoms, edat, email } = req.body;
-    
+exports.createUser = async (req, res) => {
     try {
-        const newUser = new User({ nom, cognoms, edat, email });
+        const newUser = new User(req.body);
         await newUser.save();
         res.status(201).json(newUser);
     } catch (error) {
@@ -12,30 +10,21 @@ exports.registerUser = async (req, res) => {
     }
 };
 
-exports.getAllUsers = async (req, res) => {
+exports.updateUser = async (req, res) => {
     try {
-        const users = await User.find();
-        res.status(200).json(users);
+        const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!updatedUser) return res.status(404).json({ message: 'Usuari no trobat.' });
+        res.json(updatedUser);
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        res.status(400).json({ message: error.message });
     }
 };
 
 exports.getUserById = async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
-        if (!user) return res.status(404).json({ message: 'Usuari no trobat' });
-        res.status(200).json(user);
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-};
-
-exports.updateUser = async (req, res) => {
-    try {
-        const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
-        if (!user) return res.status(404).json({ message: 'Usuari no trobat' });
-        res.status(200).json(user);
+        if (!user) return res.status(404).json({ message: 'Usuari no trobat.' });
+        res.json(user);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
@@ -43,10 +32,10 @@ exports.updateUser = async (req, res) => {
 
 exports.deleteUser = async (req, res) => {
     try {
-        const user = await User.findByIdAndDelete(req.params.id);
-        if (!user) return res.status(404).json({ message: 'Usuari no trobat' });
+        const deletedUser = await User.findByIdAndDelete(req.params.id);
+        if (!deletedUser) return res.status(404).json({ message: 'Usuari no trobat.' });
         res.status(204).send();
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        res.status(400).json({ message: error.message });
     }
 };
