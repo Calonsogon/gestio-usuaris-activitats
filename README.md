@@ -26,41 +26,43 @@ Abans de començar, assegura't de tenir instal·lat el següent:
 - **Node.js**: Descarrega'l i instal·la'l des de nodejs.org.
 - **MongoDB**: Descarrega'l i configura'l seguint les instruccions de mongodb.com.
 
-## Instal·lació
+## 📦 Instal·lació
 
 1. **Clonar el repositori**:
-```Bash
-git clone https://github.com/tu-usuari/nombre-del-repositorio.git
 
+git clone https://github.com/Calonsogon/gestio-usuaris-activitats.git
 
-2. **Instal·lar dependències:**
-```Bash
+2. **Instal·lar dependències**:
+
 npm install
 
-3. **Configurar MongoDB:** Assegura't que MongoDB estigui en funcionament.
+3. **Configurar MongoDB**: Assegura't que MongoDB estigui en funcionament.
 
-4. **Iniciar el servidor:**
-```Bash
+4. **Iniciar el servidor**:
+
 node server.js
 
-## Endpoints
+## 📡 Endpoints
 
 ### Gestió d'Usuaris
-- Crear un nou usuari: POST /appActivitats/user
-- Obtenir tots els usuaris: GET /appActivitats/users
-- Obtenir un usuari per ID: GET /appActivitats/users/:id
-- Actualitzar un usuari: PUT /appActivitats/users/:id
-- Eliminar un usuari: DELETE /appActivitats/users/:id
+
+- **POST /appActivitats/user**: Registra un nou usuari.
+- **PUT /appActivitats/users/:id**: Actualitza les dades d'un usuari.
+- **GET /appActivitats/users/:id**: Consulta la informació d'un usuari.
+- **DELETE /appActivitats/users/:id**: Elimina un usuari.
+
 
 ### Gestió d'Activitats
-- Crear una nova activitat: POST /appActivitats/activities
-- Obtenir totes les activitats: GET /appActivitats/activities
-- btenir una activitat per ID: GET /appActivitats/activities/:id
-- Actualitzar una activitat: PUT /appActivitats/activities/:id
-- Eliminar una activitat: DELETE /appActivitats/activities/:id
+
+- **POST /appActivitats/activities**: Crea una nova activitat.
+- **GET /appActivitats/activities**: Obtén totes les activitats.
+- **GET /appActivitats/activities/:id**: Obtén una activitat per ID.
+- **PUT /appActivitats/activities/:id**: Actualitza una activitat.
+- **DELETE /appActivitats/activities/:id**: Elimina una activitat.
 
 ## 🤝 Contribució
-Les contribucions són benvingudes! Obre un issue o un pull request.
 
-## Contacte
+Les contribucions són benvingudes! Si us plau, si us interessa, feu un **fork** del projecte i envieu **pull requests** o obriu **issues** si trobeu errors o teniu suggeriments.
+
+## ✉️ Contacte
 Per a qualsevol dubte, contacta'm a calonsogon6@gmail.com
