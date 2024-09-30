@@ -32,8 +32,12 @@ exports.getActivityById = async (req, res) => {
 
 exports.importActivities = async (req, res) => {
     try {
-        await Activity.deleteMany({});
-        await Activity.insertMany(activitiesData);
+        for (let newActivity of activitiesData) {
+            const existingActivity = await Activity.findOne({ nom: newActivity.nom });
+            if (!existingActivity) {
+               await Activity.create(newActivity);
+            }
+        }
         res.status(200).json({ message: 'Activitats importades correctament.' });
     } catch (error) {
         res.status(400).json({ message: error.message });
