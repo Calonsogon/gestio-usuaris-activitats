@@ -30,31 +30,6 @@ exports.getActivityById = async (req, res) => {
     }
 };
 
-exports.importActivities = async (req, res) => {
-    try {
-        for (let newActivity of activitiesData) {
-            const existingActivity = await Activity.findOne({ nom: newActivity.nom });
-            if (!existingActivity) {
-               await Activity.create(newActivity);
-            }
-        }
-        res.status(200).json({ message: 'Activitats importades correctament.' });
-    } catch (error) {
-        res.status(400).json({ message: error.message });
-    }
-};
-
-exports.exportActivities = async (req, res) => {
-    try {
-        const activities = await Activity.find({});
-        console.log('Activitats exportades:', activities);
-        res.status(200).json(activities);
-    } catch (error) {
-        console.error('Error al exportar actividades:', error);
-        res.status(500).json({ message: "Error exportant les activitats.", error });
-    }
-};
-
 exports.joinActivity = async (req, res) => {
     const { id } = req.params;
     const { userId } = req.body;

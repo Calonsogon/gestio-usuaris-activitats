@@ -1,7 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const activityRoutes = require('./routes/activityRoutes');
-const userRoutes = require('./routes/userRoutes');
+const activityRoutes = require('../routes/activityRoutes');
+const userRoutes = require('../routes/userRoutes');
+const importActivitiesRoutes = require('../controllers/importActivities'); 
+const exportActivitiesRoutes = require('../controllers/exportActivities');
+
 
 const app = express();
 const PORT = 3000;
@@ -18,7 +21,8 @@ mongoose.connect('mongodb://localhost:27017/gestioUsuarisActivitats', {
     console.error('Error al conectar a MongoDB:', err);
 });
 
-
+app.use('/appActivitats/activities/import', importActivitiesRoutes); 
+app.use('/appActivitats/activities/export', exportActivitiesRoutes);
 app.use('/appActivitats/activities', activityRoutes);
 app.use('/appActivitats/users', userRoutes);
 
