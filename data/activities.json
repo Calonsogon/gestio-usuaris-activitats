@@ -1,27 +1,96 @@
 [
-    {
-        "nom": "Sessió de Ioga",
-        "descripcio": "Classe de ioga per relaxar-se i estirar els músculs.",
-        "capacitat_maxima": 20
-    },
-    {
-        "nom": "Taller de cuina",
-        "descripcio": "Aprendre a cuinar plats mediterranis.",
-        "capacitat_maxima": 15
-    },
-    {
-        "nom": "Curs de fotografia",
-        "descripcio": "Taller per millorar les teves habilitats de fotografia.",
-        "capacitat_maxima": 10
-    },
-    {
-        "nom": "Escalada en roca",
-        "descripcio": "Activitat d'escalada en un mur d'escalada interior.",
-        "capacitat_maxima": 12
-    },
-    {
-        "nom": "Sessió de meditació",
-        "descripcio": "Sessió guiada de meditació per a la pau interior.",
-        "capacitat_maxima": 30
-    }
+  {
+    "_id": "66fd5fdf243598dddc7a7bcb",
+    "nom": "Sessió de Ioga",
+    "descripcio": "Classe de ioga per relaxar-se i estirar els músculs.",
+    "capacitat_maxima": 20,
+    "usuaris_apuntats": [],
+    "__v": 0
+  },
+  {
+    "_id": "66fd5fdf243598dddc7a7bcc",
+    "nom": "Taller de cuina",
+    "descripcio": "Aprendre a cuinar plats mediterranis.",
+    "capacitat_maxima": 15,
+    "usuaris_apuntats": [],
+    "__v": 0
+  },
+  {
+    "_id": "66fd5fdf243598dddc7a7bcd",
+    "nom": "Curs de fotografia",
+    "descripcio": "Taller per millorar les teves habilitats de fotografia.",
+    "capacitat_maxima": 10,
+    "usuaris_apuntats": [],
+    "__v": 0
+  },
+  {
+    "_id": "66fd5fdf243598dddc7a7bce",
+    "nom": "Escalada en roca",
+    "descripcio": "Activitat d'escalada en un mur d'escalada interior.",
+    "capacitat_maxima": 12,
+    "usuaris_apuntats": [],
+    "__v": 0
+  },
+  {
+    "_id": "66fd5fdf243598dddc7a7bcf",
+    "nom": "Sessió de meditació",
+    "descripcio": "Sessió guiada de meditació per a la pau interior.",
+    "capacitat_maxima": 30,
+    "usuaris_apuntats": [],
+    "__v": 0
+  },
+  {
+    "_id": "66fd66af263e4d4e2eb1a360",
+    "nom": "Sessió de Mindfullnes",
+    "descripcio": "Classe de aprendre Mindfullnes.",
+    "capacitat_maxima": 10,
+    "usuaris_apuntats": [],
+    "__v": 0
+  },
+  {
+    "_id": "66fd66e6263e4d4e2eb1a367",
+    "nom": "Sessió de Maquillatge",
+    "descripcio": "Classe de aprendre a maquillar-se.",
+    "capacitat_maxima": 12,
+    "usuaris_apuntats": [],
+    "__v": 0
+  },
+  {
+    "_id": "66fd6b80ea5b0f6008a0ca16",
+    "nom": "Curs de cuina italiana",
+    "descripcio": "Classe cuina italiana.",
+    "capacitat_maxima": 15,
+    "usuaris_apuntats": [
+      "66f990b781cf96a2915cc8aa"
+    ],
+    "__v": 1
+  },
+  {
+    "_id": "66fd6d683f397a260a69e50a",
+    "nom": "Taller de Cerámica",
+    "descripcio": "Aprendre a fer ceràmica.",
+    "capacitat_maxima": 15,
+    "usuaris_apuntats": [],
+    "__v": 0
+  },
+  {
+    "_id": "66fd72810d786fdf93421344",
+    "nom": "balla amb mi",
+    "descripcio": "Aprendre a ballar.",
+    "capacitat_maxima": 15,
+    "usuaris_apuntats": [
+      "66f990b781cf96a2915cc8aa"
+    ],
+    "__v": 1
+  },
+  {
+    "_id": "66fd82c1747900787daa9b20",
+    "nom": "balla amb mi",
+    "descripcio": "Aprendre a ballar.",
+    "capacitat_maxima": 15,
+    "usuaris_apuntats": [
+      "66f990b781cf96a2915cc8aa"
+    ],
+    "__v": 1
+  }
 ]
